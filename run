@@ -7,7 +7,7 @@ AFA16S=16s_seq.afna
 if [ ! -e $FA16S ];
 then
 	echo making fasta from csv
-	./csvtofasta.py > $FA16S
+	./csvtofasta.py --input taxa.csv --output $FA16S
 else
 	echo found cached fasta
 fi

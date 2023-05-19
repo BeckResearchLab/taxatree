@@ -34,7 +34,7 @@ def csvtofasta(input_, output_):
     print(f"saving to {output_}")
     with open(output_, "w") as outf:
         for index, row in csv.iterrows():
-            outf.write(f">taxid_{index}_\n{row[seqfield]}")
+            outf.write(f">taxid_{index}_\n{row[seqfield]}\n")
 
 if __name__ == '__main__':
     csvtofasta()
