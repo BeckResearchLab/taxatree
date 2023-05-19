@@ -10,16 +10,12 @@ import pandas as pd
 
 # the input csv has column 0 as a numbered index, we want taxonid
 # use the rest of the colums and force types back to int for ids
-csv = pd.read_csv("taxa.csv", index_col=1, usecols=range(2,11), 
-                dtype={
-                    "superkingdom": np.int32,
-                    "phylum": np.int32,
-                    "class": np.int32,
-                    "order": np.int32,
-                    "family": np.int32,
-                    "genus": int
-                }
-            )
-
+csv = pd.read_csv("taxa.csv", index_col=1, usecols=range(2,11))
+csv["superkingdom"] = csv["superkingdom"].astype(np.int32)
+csv["phylum"] = csv["phylum"].astype(np.int32)
+csv["class"] = csv["class"].astype(np.int32)
+csv["order"] = csv["order"].astype(np.int32)
+csv["family"] = csv["family"].astype(np.int32)
+csv["genus"] = csv["genus"].astype(np.int32) 
 
 print(csv.head())
