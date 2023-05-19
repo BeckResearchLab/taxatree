@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# download MUSCLE for the alignment
-rm muscle5.1.linux_intel64
-wget https://github.com/rcedgar/muscle/releases/download/5.1.0/muscle5.1.linux_intel64
-chmod +x muscle5.1.linux_intel64

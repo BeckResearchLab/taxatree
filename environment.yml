@@ -5,3 +5,4 @@ channels:
   - defaults
 dependencies:
   - pandas
+  - muscle=5.1
