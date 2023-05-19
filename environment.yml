@@ -6,3 +6,4 @@ channels:
 dependencies:
   - pandas
   - muscle=5.1
+  - raxml-ng=1.2.0
