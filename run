@@ -1,4 +1,22 @@
 #!/bin/bash
 
-# step 1, convert the csv to fasta
-./csvtofasta.py > 16s_seq.fasta
+FA16S=16s_seq.fna
+AFA16S=16s_seq.afna
+
+# step 0, convert the csv to fasta
+if [ ! -e $FA16S ];
+then
+	echo making fasta from csv
+	./csvtofasta.py > $FA16S
+else
+	echo found cached fasta
+fi
+
+# step 1, run muscle to align the sequences
+# single pass alignment, no frills
+if [ ! -e $AFA16S ];
+then
+	muscle -super5 $FA16S -output $AFA16S
+else
+	echo found cached alignment from muscle
+fi
