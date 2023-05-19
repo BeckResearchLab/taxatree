@@ -1,0 +1,7 @@
+name: taxatree
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - pandas
