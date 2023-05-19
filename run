@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# step 1, convert the csv to fasta
+./csvtofasta.py > 16s_seq.fasta
